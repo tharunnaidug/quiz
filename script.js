@@ -23,7 +23,7 @@ let counter;
 let counterLine;
 let timeVal = 10;
 let userScore = 0;
-let maxScore = questions.length + 1;
+let maxScore = questions.length;
 // quiz Start Button
 startbtn.addEventListener("click", () => {
     // introCon.classList.add("active")
