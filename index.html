@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz </title>
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="bootstrap.css">
+    <!-- Css File -->
+    <link rel="stylesheet" href="style.css">
+    <!-- CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&family=Roboto+Slab:wght@500&display=swap"  rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Welcome Part -->
+    <div class="strCon">
+        <h1>Welcome To Quiz</h1>
+        <button type="button" class="btn btn-outline-success strBtn">Start</button>
+    </div>
+
+    <!-- Introduction Part -->
+    <div class="introCon">
+        <div class="info">
+            <h4>About This Quiz</h4>
+            <p>1.This Quiz contains simple Questions</p>
+            <p>2.You Will Be Having 10 Seconds Each</p>
+            <p>3.If you fail to answer within given time Answer will pop-up automatically</p>
+            <p>4.In above Case The Point will not counted.</p>
+            <p>5.Happy Playing!</p>
+            <button type="button" class="btn btn-outline-success introBtn">Start</button>
+        </div>
+    </div>
+
+    <!-- Quiz Part -->
+    <div class="quizBox">
+        <header>
+            <div class="title"><span>Simple Quiz</span></div>
+            <div class="timer">
+                <div class="timeTxt">Time</div>
+                <div class="time">10</div>
+                <div class="timeLine"></div>
+            </div>
+        </header>
+        <section>
+            <div class="ques"></div>
+            <div class="options">
+                <!-- <div class="option">
+                    <span> Hyper Text Markup Language</span>
+                    <div class="icon tick"><i class="fas fa-check"></i></div>
+                </div>
+                <div class="option">
+                    <span> Hyper Text Preprocesser</span>
+                </div>
+                <div class="option">
+                    <span> Hyper Text program Language</span>
+                    <div class="icon cross"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="option" >
+                    <span> Hyper Text multiple Language</span>
+
+                </div> -->
+            </div>
+        </section>
+        <footer>
+            <div class="totQues">
+                <span>
+                    <!-- <p>1</p>of<p>4</p>Questions -->
+                </span>
+            </div>
+            <button type="button" class="btn btn-success nxtBtn">Next Question</button>
+        </footer>
+    </div>
+
+    <!-- Result part -->
+    <div class="resCon">
+        <div class="icon">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <div class="resTxt">
+            <!-- congratulations..You Did It!! -->
+        </div>
+        <div class="score">
+            <!-- you got 10 out of 10 questions -->
+        </div>
+        <div class="buttons">
+            <button type="button" class="btn btn-success restart">Replay</button>
+            <button type="button" class="btn btn-outline-dark quit">Exit</button>
+        </div>
+    </div>
+</body>
+
+<!-- provider -->
+<script src="provider.js"></script>
+<!-- Script js -->
+<script src="script.js"></script>
+
+</html>

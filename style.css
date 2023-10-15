@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: rgb(56, 173, 56);
+    --secondary: rgba(242, 255, 156, 0.968);
+}
+
+.strCon,
+.introCon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(229, 211, 179);
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.strCon h1 {
+    font-size: 3rem;
+}
+
+.strCon button,
+.info button {
+    margin-top: .5rem;
+    width: 5rem;
+    font-weight: 700;
+}
+
+.info {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    width: 50%;
+    height: 50%;
+    border-radius: 1rem;
+    padding: 0 1rem;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.info h4 {
+    font-weight: 700;
+    color: blueviolet;
+    padding: .4rem;
+}
+
+.info p {
+    font-size: 1rem;
+    margin: .2rem;
+    padding: .2rem;
+}
+
+.info button {
+    margin-left: 45%;
+    margin-bottom: 10px;
+}
+
+body {
+    background-color: rgb(138, 233, 138);
+}
+
+.quizBox,
+.resCon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 10;
+    font-family: 'Roboto Slab', serif;
+}
+
+.quizBox {
+    display: none;
+}
+
+.quizBox header {
+    position: relative;
+    z-index: 69;
+    height: 55px;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 10px;
+    box-shadow: var(--primary) 0 0 2.6px;
+}
+
+.quizBox header .title {
+    font-size: 1.75rem;
+    font-weight: 500;
+    font-family: 'Chakra Petch', sans-serif;
+    margin-left: .4rem;
+}
+
+.quizBox header .timer {
+    font-family: 'Chakra Petch', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 35px;
+    background-color: rgb(45, 156, 207);
+    border-radius: .2rem;
+}
+
+.quizBox header .timeLine {
+    position: absolute;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+    background: gold;
+}
+
+.quizBox header .timer .timeTxt {
+    font-family: 'Chakra Petch', sans-serif;
+    color: white;
+    padding: .1rem .6rem;
+    user-select: none;
+}
+
+.quizBox header .timer .time {
+    background-color: blue;
+    color: white;
+    padding: .1rem .6rem;
+    border-radius: .2rem;
+    user-select: none;
+    font-weight: 600;
+    text-align: center;
+    border-radius: .3rem;
+    margin-right: .3rem;
+}
+
+.quizBox section {
+    padding: 1rem 1.5rem;
+
+}
+
+.quizBox section .ques {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.quizBox section .options {
+    display: block;
+    padding: 1rem 0;
+}
+
+.quizBox section .option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--secondary);
+    border: 1px solid rgba(214, 241, 39, 0.968);
+    border-radius: 5px;
+    padding: .5rem 1rem;
+    margin-bottom: .9rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.quizBox section .option:hover {
+
+    background-color: rgba(218, 247, 29, 0.995);
+}
+
+.options .option:last-child {
+    margin-bottom: 0;
+}
+
+.options .option .icon {
+    text-align: center;
+    height: 29px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    pointer-events: none;
+}
+
+.options .option .tick {
+    color: var(--primary);
+    border-color: var(--primary);
+    background-color: rgb(197, 244, 197);
+}
+
+.options .option.correct {
+    color: var(--primary);
+    border-color: var(--primary);
+    background-color: rgb(221, 236, 221);
+}
+
+.options .option.correct:hover {
+    background-color: rgb(175, 238, 175);
+}
+
+.options .option .cross {
+    color: rgb(239, 64, 64);
+    border-color: rgb(239, 64, 64);
+    background-color: rgb(226, 148, 148);
+}
+
+.options .option.incorrect {
+    color: rgb(239, 64, 64);
+    border-color: rgb(232, 39, 39);
+    background-color: rgb(241, 206, 206);
+}
+
+.options .option.incorrect:hover {
+    background-color: rgb(226, 148, 148);
+}
+
+.options .option.disabled {
+    pointer-events: none;
+}
+
+.quizBox footer {
+    height: 55px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.quizBox footer .totQues span {
+    font-size: 1rem;
+    display: flex;
+    user-select: none;
+}
+
+.quizBox footer .totQues span p {
+    margin: 0;
+    font-weight: 600;
+    padding: 0 .8rem;
+}
+
+.quizBox footer .totQues span p:first-child {
+    padding-left: 0;
+}
+
+.quizBox footer button {
+    display: none;
+    height: 40px;
+    font-weight: 600;
+}
+
+.resCon {
+    background: white;
+    width: 50%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.5);
+}
+
+.resCon.active {
+    z-index: 99;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.resCon .icon {
+    font-size: 80px;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.resCon .resTxt {
+    font-size: large;
+    font-weight: 500;
+    margin: 1rem 0;
+}
+
+.resCon .score {
+    margin-bottom: 1rem;
+}
+
+.resCon .buttons {
+    margin: 1rem 0;
+}
+
+.resCon .buttons button {
+    margin: 0 1rem;
+}
+
+/* Media quires */
+@media (max-width:578px) {
+    .info {
+        width: 80%;
+        height: 60%;
+    }
+
+    .info button {
+        margin-left: 38%;
+    }
+
+    .quizBox footer .totQues span p {
+        padding: 0 .0rem;
+    }
+
+    .quizBox footer button {
+        font-size: small;
+    }
+}
+
+@media (max-width:768px) {
+    .info button {
+        margin-left: 40%;
+    }
+
+    .quizBox header .title {
+        font-size: 1rem;
+    }
+
+    .quizBox section .ques {
+        font-size: 1.1rem;
+    }
+
+    .quizBox {
+        width: 80%;
+    }
+
+    .resCon {
+        width: 80%;
+    }
+}
+
+@media (max-width:1024px) {}
+
+@media (min-width:768px) {
+    .quizBox header {
+        height: 85px;
+    }
+
+    .info p {
+        font-size: medium;
+    }
+}
