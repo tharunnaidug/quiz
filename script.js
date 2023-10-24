@@ -28,6 +28,7 @@ let maxScore = questions.length;
 startbtn.addEventListener("click", () => {
     // introCon.classList.add("active")
     startCon.style.display = "none"
+    introCon.style.display=`flex`
 })
 //Contiue button
 introbtn.addEventListener("click", () => {
