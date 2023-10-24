@@ -20,6 +20,9 @@
     z-index: 99;
     font-family: 'Chakra Petch', sans-serif;
 }
+.introCon{
+    display: none;
+}
 
 .strCon h1 {
     font-size: 3rem;
